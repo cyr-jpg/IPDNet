@@ -1,22 +1,14 @@
 import nntplib
 from ultralytics import YOLO
 
-from ultralytics import RTDETR
-
 if __name__ == '__main__':
-    # model = YOLO(r'/home/nvidia/chunguole/cyr/ultralytics-main/ultralytics/cfg/models/v11new/yolo11s-final.yaml')
-    # 加载模型
     model = YOLO(r'')#替换了backbone
-    # model = YOLO('/home/zxqgy/gyy/ultralytics-up/ultralytics/cfg/models/v8/yolov8-EfficientHead.yaml')#换了轻量化的检测头
-    # model = YOLO(r'/home/zxqgy/gyy/ultralytics-main/ultralytics/cfg/models/v8/yolov8.yaml').load("/home/zxqgy/gyy/ultralytics-main/runs/train/train/weights/best.pt")  # 使用预训练权重训练
-    # 训练参数 ----------------------------------------------------------------------------------------------
     model.train(
         data='',
-        # data = '/home/nvidia/chunguole/cyr/ultralytics-main/ai/data.yaml',
         epochs=1000,  # (int) 训练的周期数
         patience=50,  # (int) 等待无明显改善以进行早期停止的周期数幼儿班
         batch=4,  # (int) 每批次的图像数量（-1 为自动批处理）
-        imgsz=1024,  # (int) 输入图像的大小，整数或w，h
+        imgsz=640,  # (int) 输入图像的大小，整数或w，h
         save=True,  # (bool) 保存训练检查点和预测结果 
         save_period=-1,  # (int) 每x周期保存检查点（如果小于1则禁用）
         cache=False,  # (bool) True/ram、磁盘或False。使用缓存加载数据
@@ -39,12 +31,9 @@ if __name__ == '__main__':
         fraction=1.0,  # (float) 要训练的数据集分数（默认为1.0，训练集中的所有图像）
         profile=False,  # (bool) 在训练期间为记录器启用ONNX和TensorRT速度
         freeze=None,  # (int | list, 可选) 在训练期间冻结前 n 层，或冻结层索引列表。
-        # 分割
         overlap_mask=True,  # (bool) 训练期间是否应重叠掩码（仅适用于分割训练）
         mask_ratio=4,  # (int) 掩码降采样比例（仅适用于分割训练）
-        # 分类
         dropout=0.0,  # (float) 使用丢弃正则化（仅适用于分类训练）
-        # 超参数 ----------------------------------------------------------------------------------------------
         lr0=0.01,  # (float) 初始学习率（例如，SGD=1E-2，Adam=1E-3）
         lrf=0.2,  # (float) 最终学习率（lr0 * lrf）
         momentum=0.937,  # (float) SGD动量/Adam beta1
@@ -72,4 +61,5 @@ if __name__ == '__main__':
         mosaic=1.0,  # (float) 图像马赛克（概率）
         mixup=0.0,  # (float) 图像混合（概率）
         copy_paste=0.0,  # (float) 分割复制-粘贴（概率）
+
     )
