@@ -1,11 +1,6 @@
-task: detect
-mode: train
-model: //home/nvidia/chunguole/runs/xiao/ours22/weights/best.pt
-data: /home/nvidia/chunguole/cyr/ultralytics-main/visdrone/data.yaml
 epochs: 1000
 time: null
 patience: 50
-batch: 1
 imgsz: 1024
 save: true
 save_period: -1
