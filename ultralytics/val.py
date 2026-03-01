@@ -14,11 +14,11 @@ if __name__ == '__main__':
         save_hybrid=False,  # 保存标签的混合版本（标签 + 额外的预测）
         conf=,  # 检测的目标置信度阈值（默认为0.25用于预测，0.001用于验证）
         iou=,  # 非极大值抑制 (NMS) 的交并比 (IoU) 阈值
-        project='runs/val',  # 项目名称（可选）
+        project='',  # 项目名称（可选）
         name='exp',  # 实验名称，结果保存在'project/name'目录下（可选）
         max_det=,  # 每张图像的最大检测数
-        half=True,  # 使用半精度 (FP16)
-        dnn=False,  # 使用OpenCV DNN进行ONNX推断
+        half=,  # 使用半精度 (FP16)
+        dnn=,  # 使用OpenCV DNN进行ONNX推断
         plots=True,  # 在训练/验证期间保存图像
     )
     print(f"mAP50-95: {metrics.box.map}") # map50-95
