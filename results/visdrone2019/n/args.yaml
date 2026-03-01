@@ -1,6 +1,4 @@
 epochs: 1000
-time: null
-patience: 50
 imgsz: 1024
 save: true
 save_period: -1
