@@ -1,0 +1,3 @@
+
+nc: 8
+names: ['airplane', 'bridge', 'storage-tank', 'ship', 'swimming-pool', 'vehicle', 'person', 'wind-mill']
