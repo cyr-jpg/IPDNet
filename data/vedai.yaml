@@ -1,0 +1,11 @@
+
+# Classes
+names:
+  0: 'car'
+  1: 'pickup'
+  2: 'camping'
+  3: 'truck'
+  4: 'other'
+  5: 'tractor'
+  6: 'boat'
+  7: 'van'
