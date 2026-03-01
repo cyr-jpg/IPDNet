@@ -1,10 +1,4 @@
-task: detect
-mode: train
-model: //home/nvidia/chunguole/cyr/ultralytics-main/ultralytics/cfg/models/v11new/yolo11n-2.yaml
-data: /home/nvidia/chunguole/cyr/ultralytics-main/vedi/vedai.yaml
 epochs: 1000
-time: null
-patience: 100
 batch: 4
 imgsz: 640
 save: true
