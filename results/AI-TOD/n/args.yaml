@@ -1,4 +1,3 @@
-data: /home/nvidia/chunguole/cyr/ultralytics-main/ai/data.yaml
 epochs: 1000
 batch: 4
 imgsz: 640
